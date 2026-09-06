@@ -199,6 +199,8 @@ When you are at the heart of it, it gives you solutions to address.
 
 When you are far from it, you just see a very vague wall that exists.
 
+![City skyline at night](/images/city-skyline.jpg)
+
 And perhaps that is what these two years have done.
 
 I have moved across floors.
