@@ -7,5 +7,4 @@ languageCode = "en-us"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
-  [params.author]
-    name = "Swapnil Bawane"
+  author = "Swapnil Bawane"
