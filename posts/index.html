@@ -195,6 +195,35 @@ You have to help yourself first. Focus on what you can control for yourself.
         <path d="M12 6H0l6-6z" />
     </svg>
 </a>
+<button id="read-aloud-btn" style="margin: 1rem 0; padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--border); background: var(--entry); color: var(--primary); cursor: pointer;">🔊 Read Aloud</button>
+<script>
+(function() {
+  var btn = document.getElementById('read-aloud-btn');
+  if (!btn) return;
+  var utterance = null;
+  var speaking = false;
+  btn.addEventListener('click', function() {
+    if (speaking) {
+      window.speechSynthesis.cancel();
+      speaking = false;
+      btn.textContent = '🔊 Read Aloud';
+      return;
+    }
+    var content = document.querySelector('.post-content');
+    if (!content) return;
+    utterance = new SpeechSynthesisUtterance(content.innerText);
+    utterance.onend = function() {
+      speaking = false;
+      btn.textContent = '🔊 Read Aloud';
+    };
+    window.speechSynthesis.speak(utterance);
+    speaking = true;
+    btn.textContent = '⏸️ Stop';
+  });
+})();
+</script>
+
+
 
 <script>
     let menu = document.getElementById('menu');
