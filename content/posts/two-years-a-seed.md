@@ -3,7 +3,7 @@ title: "Two Years, A Seed"
 date: 2026-09-06
 draft: false
 ---
-Two years.
+Two years....
 
 Two years working at the SPIT Alumni Network.
 
