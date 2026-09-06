@@ -3,6 +3,9 @@ title: "Two Years, A Seed"
 date: 2026-09-06
 draft: false
 summary: "Two years of early mornings and late nights, watching the same place from sunrise to sunset. Not answers — just enough time to see what a small tree needs before it can grow."
+cover:
+  image: "/images/lantern-walkway.jpg"
+  alt: "A lantern-lit walkway at night"
 ---
 Two years....
 
