@@ -200,25 +200,65 @@ You have to help yourself first. Focus on what you can control for yourself.
 (function() {
   var btn = document.getElementById('read-aloud-btn');
   if (!btn) return;
-  var utterance = null;
   var speaking = false;
+  var keepAliveInterval = null;
+
+  function getVoicesAsync() {
+    return new Promise(function(resolve) {
+      var voices = window.speechSynthesis.getVoices();
+      if (voices.length) {
+        resolve(voices);
+        return;
+      }
+      window.speechSynthesis.onvoiceschanged = function() {
+        resolve(window.speechSynthesis.getVoices());
+      };
+    });
+  }
+
+  function stopSpeaking() {
+    window.speechSynthesis.cancel();
+    if (keepAliveInterval) {
+      clearInterval(keepAliveInterval);
+      keepAliveInterval = null;
+    }
+    speaking = false;
+    btn.textContent = '🔊 Read Aloud';
+  }
+
   btn.addEventListener('click', function() {
     if (speaking) {
-      window.speechSynthesis.cancel();
-      speaking = false;
-      btn.textContent = '🔊 Read Aloud';
+      stopSpeaking();
       return;
     }
+
     var content = document.querySelector('.post-content');
     if (!content) return;
-    utterance = new SpeechSynthesisUtterance(content.innerText);
-    utterance.onend = function() {
-      speaking = false;
-      btn.textContent = '🔊 Read Aloud';
-    };
-    window.speechSynthesis.speak(utterance);
-    speaking = true;
-    btn.textContent = '⏸️ Stop';
+
+    getVoicesAsync().then(function(voices) {
+      var utterance = new SpeechSynthesisUtterance(content.innerText);
+      utterance.lang = 'en-US';
+      var preferred = voices.find(function(v) { return v.lang === 'en-US'; });
+      if (preferred) utterance.voice = preferred;
+
+      utterance.onend = stopSpeaking;
+      utterance.onerror = stopSpeaking;
+
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+      speaking = true;
+      btn.textContent = '⏸️ Stop';
+
+      
+      keepAliveInterval = setInterval(function() {
+        if (!window.speechSynthesis.speaking) {
+          stopSpeaking();
+          return;
+        }
+        window.speechSynthesis.pause();
+        window.speechSynthesis.resume();
+      }, 10000);
+    });
   });
 })();
 </script>
