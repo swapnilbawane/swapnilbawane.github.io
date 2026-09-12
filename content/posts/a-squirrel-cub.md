@@ -65,6 +65,7 @@ I said, "I have a very small squirrel cub. Can you take her?"
 They said, "Yes. Please bring her."
 
 So I just hopped into the cab, put the cub safely into the box, and went straight there.
+![travelling with the squirrel cub](/images/travel-squirrel-cub.jpg)
 
 On the way, in our Whatsapp group, my alumni friends kept pouring in recommendations, contacts and suggestions, all trying to figure out what could be done so that this little being could survive and see another day.
 
@@ -85,12 +86,16 @@ I took the little cub in her box to them.
 They instantly said,
 **"Don't worry. We'll take care of her. You can go home."**
 
+![in safe hands at the hospital](/images/xray-ward-handover.jpg)
+
 Then I asked, "What do you do next?"
 They said they'll feed her, take care of her, and when she is fine and strong enough, they'll release her back into the wild.
 
 That was a very sweet ending to the story.
 
 A big, big thank you to the team at the **Bai Sakarbai Dinshaw Petit Hospital for Animals** for taking care of animals and accommodating this little one with such warmth and open arms.
+
+![in safe hands at the hospital](/images/xray-ward-handover.jpg)
 
 I was especially touched by something I heard there.
 
