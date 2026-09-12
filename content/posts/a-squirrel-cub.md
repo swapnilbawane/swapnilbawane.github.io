@@ -95,7 +95,7 @@ That was a very sweet ending to the story.
 
 A big, big thank you to the team at the **Bai Sakarbai Dinshaw Petit Hospital for Animals** for taking care of animals and accommodating this little one with such warmth and open arms.
 
-![in safe hands at the hospital](/images/the-hospital.jpg)
+![the hospital](/images/the-hospital.jpg)
 
 I was especially touched by something I heard there.
 
