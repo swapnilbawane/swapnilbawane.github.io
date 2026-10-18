@@ -7,6 +7,7 @@ cover:
   image: "/images/chandi-homa.jpg"
   alt: "Devi as she blesses everyone after Chandi Homa performed by learned Acharyas in the presence of Swamiji at SSRVM Mulund"
 ---
+_In photo: Devi Moorthi as she blesses everyone after Chandi Homa; performed by learned Acharyas in the presence of Swamiji at SSRVM Mulund_
 
 **It's an experience.**
 
